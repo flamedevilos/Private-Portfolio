@@ -1,0 +1,119 @@
+.App {
+  @apply w-full min-h-screen px-10 py-6 bg-black/60;
+}
+.App:before {
+  @apply z-888 content-normal absolute w-full h-14 bg-gradient-to-b from-transparent to-blue-gradient left-0 bottom-0;
+}
+
+.navigation-bar {
+  @apply sticky left-0 top-0 w-full h-20 px-10 flex items-center justify-between gap-1 slide-inner z-40;
+}
+
+.menu {
+  @apply rounded-xl menu-horizontal text-pretty tracking-wide font-semibold gap-2 max-md:hidden;
+}
+
+.navigation-bar.stretched {
+  @apply rounded-3xl;
+}
+
+.navigation-bar.stretched .nav-btn {
+  @apply absolute top-4 right-10;
+}
+
+.navigation-bar.stretched .app-name {
+  @apply absolute top-4 left-10 max-md:text-5xl;
+}
+
+.navigation-bar.stretched .menu {
+  @apply absolute w-full h-screen top-24 right-2 pt-10 bg-black/80 backdrop-blur-lg backdrop-brightness-200 flex flex-col items-center slide-inner z-40;
+}
+
+.navigation-bar.stretched .lang-select {
+  @apply w-full dropdown dropdown-bottom justify-center;
+}
+
+.navigation-bar.stretched .lang-select ul {
+  @apply absolute w-40;
+}
+
+.nav-btn {
+  @apply btn-circle swap swap-rotate ease-in-out duration-200 hover:drop-shadow-white-shadow hover:bg-zinc-600/30 md:hidden;
+}
+
+.app-name {
+  @apply font-app-name text-5xl font-bold text-blue-700 ease-in-out duration-200 cursor-pointer drop-shadow-white-shadow hover:drop-shadow-mix-shadow max-md:text-4xl;
+}
+
+.navigation-list {
+  @apply border-none ease-in-out duration-150 cursor-pointer hover:drop-shadow-white-shadow hover:bg-zinc-300/50 rounded-md hover:text-white;
+}
+
+.navigation-list a.active {
+  @apply bg-slate-800 drop-shadow-white-shadow font-semibold rounded-md;
+}
+
+.collapse-title {
+  @apply justify-center text-2xl text-zinc-200 font-titles font-semibold tracking-wide flex flex-row gap-2 drop-shadow-white-shadow max-md:text-xl max-md:justify-start;
+}
+
+.pdf-down {
+  @apply text-lg font-titles tracking-wide flex flex-row items-center gap-2 drop-shadow-white-shadow max-md:text-sm;
+}
+
+.info-parag {
+  @apply py-1 flex gap-5 items-center text-pretty font-semibold;
+}
+
+.form-input {
+  @apply input w-full h-12 text-white tracking-wider text-pretty pl-6 rounded-xl bg-slate-300/30 focus-within:ring-2 focus-within:ring-sky-500;
+}
+
+.errors-span {
+  @apply label-text-alt text-sm text-crimson text-pretty tracking-wide font-semibold pl-10;
+}
+
+.errors-input {
+  @apply border-crimson ring-crimson bg-crimson/20;
+}
+
+.text-area {
+  @apply h-36 pt-3;
+}
+
+.submit-btn {
+  @apply btn m-4 w-72 h-10 items-center justify-center bg-blue-pure/30 backdrop-blur-sm text-slate-400 text-pretty text-lg font-semibold border-none rounded-3xl ease-in-out duration-300 hover:text-white hover:bg-black/80 hover:drop-shadow-white-shadow max-md:w-40;
+}
+
+.download-btn {
+  @apply flex flex-row gap-2 w-36 h-10 items-center justify-center bg-blue-pure/30 backdrop-blur-sm text-slate-300 text-pretty text-sm border-none rounded-md ease-in-out duration-300 hover:text-white hover:bg-black/80 hover:drop-shadow-white-shadow;
+}
+
+.black-glass {
+  @apply bg-black/40 rounded-2xl shadow-black-box-shadow backdrop-blur-sm backdrop-brightness-200 border-solid border-2 border-black/5;
+}
+
+.watter-glass {
+  @apply bg-blue-900/40 rounded-2xl shadow-black-box-shadow backdrop-blur-sm backdrop-brightness-200 border-solid border-2 border-black/5;
+}
+
+.green-glass {
+  @apply bg-malachite/40 rounded-2xl shadow-black-box-shadow backdrop-blur-sm backdrop-brightness-200 border-solid border-2 border-black/5;
+}
+
+.slide-inner {
+  animation-duration: 2s;
+  animation-name: slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}

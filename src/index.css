@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*======= Google Font =======*/
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Righteous&display=swap");
+
+* {
+  @apply box-border text-white;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-hero-pattern bg-cover bg-fixed;
+}
+
+::-webkit-scrollbar {
+  background: #eeeeee;
+  width: 12px;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0464b6;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #057de4;
+}
+
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.834) url("img/home_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.ring1 {
+  width: 200px;
+  height: 200px;
+  border: 0px solid black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ring1:nth-child(1) {
+  border-bottom-width: 10px;
+  border-color: violet;
+  animation: rotate1 2s linear infinite;
+}
+.ring1:nth-child(2) {
+  border-right-width: 10px;
+  border-color: lightskyblue;
+  animation: rotate2 2s linear infinite;
+}
+.ring1:nth-child(3) {
+  border-top-width: 10px;
+  border-color: greenyellow;
+  animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(-10deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate3 {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
